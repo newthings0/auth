@@ -4,6 +4,7 @@ import connectToDatabase from "@/lib/mongodb";
 import bcrypt from "bcryptjs";
 import CredentialsProvider from "next-auth/providers/credentials";
 import Github from "next-auth/providers/github";
+import Google from "next-auth/providers/google";
 
 const handler = NextAuth({
   session: {
@@ -11,6 +12,10 @@ const handler = NextAuth({
     },
     providers: [
 
+        Google({
+            clientId: process.env.GOOGLE_CLIENT_ID as string,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+        }),
         Github({
             clientId: process.env.GITHUB_ID as string,
             clientSecret: process.env.GITHUB_SECRET as string,
@@ -45,7 +50,7 @@ const handler = NextAuth({
     ],
     callbacks: {
         async signIn({ account, profile }) {
-            if (account?.provider === "github") {
+            if (account?.provider === "google" || "github") {
                 await connectToDatabase();
                 const existingUser = await User.findOne({ email: profile?.email });
                 if (!existingUser) {

@@ -126,7 +126,7 @@ const SignUp = () => {
           <div className="flex my-2 justify-evenly mx-auto items-center">
             <Button
               disabled={false}
-              onClick={() => {}}
+              onClick={(e) => handleProvider(e, "google")}
               variant="outline"
               size="lg"
               className="bg-slate-300 hover:bg-slate-400 hover:scale-110"
@@ -135,7 +135,7 @@ const SignUp = () => {
             </Button>
             <Button
               disabled={false}
-              onClick={(e) => handleProvider(e,"github")}
+              onClick={(e) => handleProvider(e, "github")}
               variant="outline"
               size="lg"
               className="bg-slate-300 hover:bg-slate-400 hover:scale-110"
