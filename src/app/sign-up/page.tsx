@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
+// import { Separator } from "@/components/ui/separator";
 
 import styles from "./login.module.css";
 import Link from "next/link";
@@ -123,7 +123,7 @@ const SignUp = () => {
             </Button>
           </form>
 
-          {/* <Separator /> */} 
+          {/* <Separator /> */}
 
           <div className={styles.orContainer}>
             <hr className={styles.divider} />
