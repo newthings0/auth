@@ -123,13 +123,14 @@ const SignUp = () => {
             </Button>
           </form>
 
+          <Separator />
+
           <div className={styles.orContainer}>
             <hr className={styles.divider} />
             <span className={styles.orText}>or</span>
             <hr className={styles.divider} />
           </div>
 
-          <Separator />
           <div className="flex my-2 justify-evenly mx-auto items-center">
             <Button
               disabled={false}
