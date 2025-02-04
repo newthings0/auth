@@ -123,7 +123,7 @@ const SignUp = () => {
             </Button>
           </form>
 
-          <Separator />
+          {/* <Separator /> */} 
 
           <div className={styles.orContainer}>
             <hr className={styles.divider} />
