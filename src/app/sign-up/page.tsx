@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 
+import styles from "./login.module.css";
 import Link from "next/link";
 
 //react icons
@@ -121,6 +122,12 @@ const SignUp = () => {
               continue
             </Button>
           </form>
+
+          <div className={styles.orContainer}>
+            <hr className={styles.divider} />
+            <span className={styles.orText}>or</span>
+            <hr className={styles.divider} />
+          </div>
 
           <Separator />
           <div className="flex my-2 justify-evenly mx-auto items-center">
